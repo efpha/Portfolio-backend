@@ -9,10 +9,10 @@ const App = express();
 const Port = process.env.PORT
 
 App.use(cors({
-    origin: 'https://cephaportfolio.vercel.app', // Your frontend domain
-    methods: ['GET'], // Allow only GET requests (you can add more methods if needed)
+    origin: 'https://cephaportfolio.vercel.app',
+    methods: ['GET'],
     allowedHeaders: ['Content-Type'] // Allow necessary headers
-})); // Connection between backend and frontend
+}));
 App.use(express.json());
 
 
