@@ -18,7 +18,7 @@ App.use(express.json());
 
 // route to cv
 App.get('/api/download-cv', (req, res)=>{
-    const filePath = path.resolve(process.env.CV_FILE_PATH);
+    const filePath = path.resolve('public', 'Resume_Joyanne_Achieng.pdf');
     res.download(filePath, 'Resume_Joyanne_Achieng.pdf', (err) => {
         if(err){
             console.log("Error sending file: ", err);
