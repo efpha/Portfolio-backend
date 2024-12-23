@@ -27,6 +27,10 @@ App.get('/api/download-cv', (req, res)=>{
     })
 })
 
+App.get('/api/hello', (req, res) => {
+    res.json({ message: 'Hello, World!' });
+  });
+
 
 App.listen(Port, () => {
     console.log(`Server running on port ${Port}`);
