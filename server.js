@@ -8,7 +8,11 @@ dotenv.config();
 const App = express();
 const Port = process.env.PORT
 
-App.use(cors({ origin: 'https://cephaportfolio.vercel.app/' })); // Connection between backend and frontend
+App.use(cors({
+    origin: 'https://cephaportfolio.vercel.app', // Your frontend domain
+    methods: ['GET'], // Allow only GET requests (you can add more methods if needed)
+    allowedHeaders: ['Content-Type'] // Allow necessary headers
+})); // Connection between backend and frontend
 App.use(express.json());
 
 
