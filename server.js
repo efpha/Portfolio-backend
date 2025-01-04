@@ -18,19 +18,14 @@ App.use(express.json());
 
 // route to cv
 App.get('/api/download-cv', (req, res)=>{
-    const filePath = path.resolve('public', 'Resume_Joyanne_Achieng.pdf');
-    res.download(filePath, 'Resume_Joyanne_Achieng.pdf', (err) => {
+    const filePath = path.resolve('public', 'Cepha_resume.pdf');
+    res.download(filePath, 'Cepha_resume.pdf', (err) => {
         if(err){
             console.log("Error sending file: ", err);
             res.status(500).send('Error occurred while downloading the file')
         }
     })
 })
-
-App.get('/api/hello', (req, res) => {
-    res.json({ message: 'Hello, World!' });
-  });
-
 
 App.listen(Port, () => {
     console.log(`Server running on port ${Port}`);
