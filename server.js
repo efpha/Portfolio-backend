@@ -15,7 +15,6 @@ App.use(cors({
 }));
 App.use(express.json());
 
-
 // route to cv
 App.get('/api/download-cv', (req, res)=>{
     const filePath = path.resolve('public', 'Cepha_resume.pdf');
@@ -26,7 +25,6 @@ App.get('/api/download-cv', (req, res)=>{
         }
     })
 })
-
 App.listen(Port, () => {
     console.log(`Server running on port ${Port}`);
 })
