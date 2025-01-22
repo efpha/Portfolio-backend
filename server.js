@@ -11,7 +11,7 @@ const Port = process.env.PORT
 App.use(cors({
     origin: 'https://cephaportfolio.vercel.app',
     methods: ['GET'],
-    allowedHeaders: ['Content-Type'] // Allow necessary headers
+    allowedHeaders: ['Content-Type']
 }));
 App.use(express.json());
 
