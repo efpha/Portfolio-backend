@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: portfolio-backend
+    runtime: node
+    repo: https://github.com/efpha/Portfolio-backend  
+    branch: main                              
+    buildCommand: npm install                 
+    startCommand: node server.js             
+    envVars:
+      - key: PORT
+        value: 3000                           
+      - key: NODE_ENV
+        value: production                     
