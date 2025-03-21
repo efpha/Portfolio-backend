@@ -25,6 +25,10 @@ App.get('/api/download-cv', (req, res)=>{
         }
     })
 })
+App.get('/api/hello', (req,res) => {
+    res.send("Status 200 Ok");
+    console.log("200 Ok");
+})
 App.listen(Port, () => {
     console.log(`Server running on port ${Port}`);
 })
