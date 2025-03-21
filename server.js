@@ -25,6 +25,7 @@ App.get('/api/download-cv', (req, res)=>{
         }
     })
 })
+//test route
 App.get('/api/hello', (req,res) => {
     res.send("Status 200 Ok");
     console.log("200 Ok");
